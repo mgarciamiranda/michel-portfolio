@@ -10,12 +10,12 @@
     :root {
       --bg: #FFFFFF;
       --surface: #F8FAFC;
-      --primary: #0F172A; /* Deep Slate */
-      --accent: #2563EB;  /* Clinical Blue */
+      --primary: #0F172A; 
+      --accent: #2563EB;  
       --text-main: #1E293B;
       --text-muted: #64748B;
       --border: #E2E8F0;
-      --glass: rgba(255, 255, 255, 0.8);
+      --rail-width: 80px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,144 +24,175 @@
       background: var(--bg); 
       color: var(--text-main); 
       font-family: 'Inter', sans-serif; 
-      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* Clinical/Tech Typography */
-    h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--primary); }
-
-    /* Mobile-First Navigation */
-    .nav-bar {
-      position: fixed; top: 0; width: 100%; height: 70px;
-      background: var(--glass); backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%; z-index: 1000;
+    /* Upgraded Side Rail */
+    .side-rail {
+      position: fixed; left: 0; top: 0; bottom: 0;
+      width: var(--rail-width);
+      border-right: 1px solid var(--border);
+      background: var(--bg);
+      display: flex; flex-direction: column; align-items: center;
+      padding: 40px 0; z-index: 100;
     }
 
-    .nav-links { display: none; gap: 2rem; }
-    @media (min-width: 1024px) { .nav-links { display: flex; } }
+    .rail-link {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      margin: 30px 0; transition: 0.3s;
+    }
+    .rail-link:hover, .rail-link.active { color: var(--accent); }
+
+    /* Main Content Layout */
+    .main-content { margin-left: var(--rail-width); padding: 0 5%; }
+    
+    @media (max-width: 1024px) {
+      .side-rail { display: none; }
+      .main-content { margin-left: 0; }
+      .mobile-nav { display: flex; }
+    }
+
+    /* Hero Section with Rotating Word */
+    .hero {
+      height: 100vh; display: flex; flex-direction: column; justify-content: center;
+      max-width: 1000px; margin: 0 auto;
+    }
+    .hero h1 { font-family: 'Plus Jakarta Sans'; font-size: clamp(3rem, 10vw, 6rem); line-height: 1; margin-bottom: 2rem; }
+    #rotateWord { color: var(--accent); border-bottom: 4px solid var(--accent); padding-bottom: 5px; }
 
     /* Floating Quick Actions */
     .quick-actions {
       position: fixed; bottom: 30px; right: 30px;
-      display: flex; flex-direction: column; gap: 12px; z-index: 1001;
+      display: flex; flex-direction: column; gap: 10px; z-index: 1000;
     }
     .action-btn {
+      width: 56px; height: 56px; border-radius: 16px;
       background: var(--primary); color: white;
-      width: 50px; height: 50px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-      cursor: pointer; transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+      cursor: pointer; transition: 0.3s; text-decoration: none;
     }
-    .action-btn:hover { transform: translateY(-5px); background: var(--accent); }
+    .action-btn:hover { background: var(--accent); transform: translateY(-3px); }
 
-    /* Hero Section */
-    .hero {
-      height: 100vh; display: flex; flex-direction: column;
-      justify-content: center; align-items: flex-start;
-      padding: 0 10%; background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 50%);
-    }
-
-    /* Animated Skill Bars */
-    .skill-container { margin: 2rem 0; width: 100%; max-width: 500px; }
-    .skill-label { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; }
-    .bar-bg { background: var(--border); height: 8px; border-radius: 4px; overflow: hidden; }
-    .bar-fill { 
-      background: var(--accent); height: 100%; width: 0; 
-      transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1); 
-    }
-
-    /* Reveal on Scroll */
-    .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-
-    /* Interactive Dashboard Section */
-    .dashboard-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem; margin-top: 3rem;
-    }
-    .dash-card {
+    /* Dashboard & Experience Cards */
+    .section-header { margin-bottom: 4rem; border-left: 4px solid var(--accent); padding-left: 24px; }
+    .card {
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 12px; padding: 20px; transition: 0.3s;
+      border-radius: 20px; padding: 40px; margin-bottom: 2rem;
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .dash-card:hover { border-color: var(--accent); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
+    .card:hover { border-color: var(--accent); box-shadow: 0 30px 60px -12px rgba(0,0,0,0.05); }
 
-    .tag { 
-      display: inline-block; padding: 4px 12px; border-radius: 20px; 
-      background: #DBEAFE; color: var(--accent); font-size: 12px; font-weight: 600;
-    }
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .metric-item { font-family: 'Plus Jakarta Sans'; }
+    .metric-value { font-size: 2.5rem; font-weight: 800; color: var(--accent); display: block; }
+
+    /* Animations */
+    .reveal { opacity: 0; transform: translateY(40px); transition: 1s all ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
 
-  <nav class="nav-bar">
-    <div style="font-weight: 800; letter-spacing: -1px;">MGM.</div>
-    <div class="nav-links">
-      <a href="#about" style="text-decoration: none; color: var(--text-main);">Experience</a>
-      <a href="#dashboards" style="text-decoration: none; color: var(--text-main);">Dashboards</a>
-      <a href="#contact" style="text-decoration: none; color: var(--accent); font-weight: 600;">Let's Talk</a>
-    </div>
+  <nav class="side-rail">
+    <div style="font-weight: 900; font-size: 20px; margin-bottom: 60px;">M.</div>
+    <a href="#hero" class="rail-link active">Home</a>
+    <a href="#experience" class="rail-link">Operations</a>
+    <a href="#dashboards" class="rail-link">Insights</a>
+    <a href="#contact" class="rail-link">Contact</a>
   </nav>
 
   <div class="quick-actions">
-    <div class="action-btn" onclick="window.print()" title="Download Resume"><i data-lucide="download"></i></div>
-    <div class="action-btn" onclick="navigator.clipboard.writeText('michelgarciamiranda@yahoo.com')" title="Copy Email"><i data-lucide="mail"></i></div>
+    <a href="Michel_Garcia-Miranda_Resume.pdf" target="_blank" class="action-btn"><i data-lucide="file-text"></i></a>
+    <a href="mailto:michelgarciamiranda@yahoo.com" class="action-btn"><i data-lucide="mail"></i></a>
   </div>
 
-  <section class="hero">
-    <h1 style="font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.1;">
-      Healthcare <span style="color: var(--accent);">Operations</span><br>Redefined.
-    </h1>
-    <p style="max-width: 600px; margin: 2rem 0; color: var(--text-muted); font-size: 1.2rem;">
-      Bridging the gap between clinical excellence and analytical precision. Managing $2M+ budgets and 100+ person teams.
-    </p>
-    <div class="skill-container">
-      <div class="skill-label"><span>Power BI / Analytics</span><span>95%</span></div>
-      <div class="bar-bg"><div class="bar-fill" data-width="95%"></div></div>
-    </div>
-    <div class="skill-container">
-      <div class="skill-label"><span>Operational Strategy</span><span>90%</span></div>
-      <div class="bar-bg"><div class="bar-fill" data-width="90%"></div></div>
-    </div>
-  </section>
+  <main class="main-content">
+    <section id="hero" class="hero">
+      <div class="reveal active">
+        <p style="text-transform: uppercase; letter-spacing: 4px; color: var(--text-muted); font-weight: 700; margin-bottom: 1rem;">Healthcare Operations Leader</p>
+        <h1>I <span id="rotateWord">Transform</span><br>Clinical Excellence.</h1>
+        <div class="metric-grid">
+          <div class="metric-item"><span class="metric-value">$2M+</span><p>Budget Managed</p></div>
+          <div class="metric-item"><span class="metric-value">20%</span><p>Efficiency Gain</p></div>
+          <div class="metric-item"><span class="metric-value">100+</span><p>Team Leadership</p></div>
+        </div>
+      </div>
+    </section>
 
-  <section id="dashboards" style="padding: 100px 10%;">
-    <h2 style="font-size: 2.5rem;">Interactive Dashboards</h2>
-    <p style="color: var(--text-muted);">Data-driven decision making at Stanford & Tampa General.</p>
-    
-    <div class="dashboard-grid">
-      <div class="dash-card reveal">
-        <div class="tag">Tableau</div>
-        <h3 style="margin: 15px 0 10px;">Labor Efficiency Tracker</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Reduced operational waste by 15% through real-time staff allocation metrics.</p>
+    <section id="dashboards" style="padding: 100px 0;">
+      <div class="section-header">
+        <h2>Interactive Insights</h2>
+        <p style="color: var(--text-muted);">Translating raw data into operational speed.</p>
       </div>
-      <div class="dash-card reveal">
-        <div class="tag">Databricks</div>
-        <h3 style="margin: 15px 0 10px;">Budget Variance Engine</h3>
-        <h3 style="margin: 15px 0 10px;">Budget Variance Engine</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Managed and forecasted $2M departmental budgets with 98% accuracy.</p>
+      
+      <div class="card reveal" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+        <div style="flex: 1.5; min-width: 300px;">
+          <img src="image_05be3f.png" alt="Analytics Dashboard" style="width: 100%; border-radius: 12px; border: 1px solid var(--border);">
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Regional Performance Engine</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">A custom-built Power BI solution for real-time labor tracking and variance detection at Stanford Medicine.</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <span style="padding: 6px 12px; background: #DBEAFE; color: var(--accent); border-radius: 6px; font-size: 12px; font-weight: 700;">POWER BI</span>
+            <span style="padding: 6px 12px; background: #F1F5F9; color: var(--text-muted); border-radius: 6px; font-size: 12px; font-weight: 700;">DATABRICKS</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="experience" style="padding: 100px 0;">
+      <div class="section-header">
+        <h2>Professional Journey</h2>
+        <p style="color: var(--text-muted);">8+ years of high-impact leadership.</p>
+      </div>
+
+      <div class="card reveal">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+          <h3>Business Analyst</h3>
+          <span style="color: var(--accent); font-weight: 700;">Stanford Medicine</span>
+        </div>
+        <p style="color: var(--text-muted);">Spearheading complex analytics projects to optimize reimbursement workflows and regulatory compliance across clinical divisions.</p>
+      </div>
+    </section>
+  </main>
 
   <script>
     lucide.createIcons();
 
-    // Reveal on Scroll Logic
+    // Enhanced Rotating Word Logic
+    const words = ['Transform', 'Optimize', 'Scale', 'Lead'];
+    let i = 0;
+    setInterval(() => {
+      const el = document.getElementById('rotateWord');
+      el.style.opacity = 0;
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        el.innerText = words[i];
+        el.style.opacity = 1;
+      }, 500);
+    }, 3000);
+
+    // Reveal Logic
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          // Trigger skill bars when in view
-          const bars = entry.target.querySelectorAll('.bar-fill');
-          bars.forEach(bar => bar.style.width = bar.dataset.width);
+          const link = document.querySelector(`.rail-link[href="#${entry.target.id}"]`);
+          if (link) {
+            document.querySelectorAll('.rail-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.3 });
 
-    document.querySelectorAll('.reveal, .hero').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal, section').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
