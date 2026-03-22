@@ -3,33 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michel Garcia-Miranda | Healthcare Operations Director | Strategic Business Analyst</title>
+  <title>Michel Garcia-Miranda | Healthcare Operations & Analytics Leader</title>
   <meta
     name="description"
-    content="Michel Garcia-Miranda is a healthcare operations leader and strategic business analyst with experience at Stanford Medicine, Tampa General Hospital, AdventHealth, and Datavant."
+    content="Michel Garcia-Miranda is a healthcare operations and analytics leader with experience across Stanford Medicine, Tampa General Hospital, AdventHealth, and Datavant."
   />
   <meta
     name="keywords"
-    content="Michel Garcia-Miranda, healthcare operations director, healthcare operations leader, strategic business analyst, hospital operations, patient experience, healthcare analytics, budget management, KPI dashboards, healthcare leadership"
+    content="Michel Garcia-Miranda, healthcare operations, business analyst, healthcare analytics, performance improvement, hospital operations, budget management, workforce optimization, healthcare leadership"
   />
   <meta name="author" content="Michel Garcia-Miranda" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://michelgarcia.co/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Michel Garcia-Miranda | Healthcare Operations Director" />
+  <meta property="og:title" content="Michel Garcia-Miranda | Healthcare Operations & Analytics Leader" />
   <meta
     property="og:description"
-    content="Healthcare operations leader with 8 years of progressive experience driving workforce optimization, budget stewardship, compliance, and operational transformation."
+    content="Healthcare operations and analytics leader focused on measurable performance, workforce optimization, compliance, and strategic execution."
   />
   <meta property="og:url" content="https://michelgarcia.co/" />
   <meta property="og:site_name" content="Michel Garcia-Miranda" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Michel Garcia-Miranda | Healthcare Operations Director" />
+  <meta name="twitter:title" content="Michel Garcia-Miranda | Healthcare Operations & Analytics Leader" />
   <meta
     name="twitter:description"
-    content="Healthcare operations leader and strategic business analyst with experience across Stanford Medicine, Tampa General, AdventHealth, and Datavant."
+    content="Healthcare operations and analytics leader with experience across Stanford Medicine, Tampa General Hospital, AdventHealth, and Datavant."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
   />
 
   <script type="application/ld+json">
@@ -37,7 +44,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Michel Garcia-Miranda",
-    "jobTitle": "Healthcare Operations Leader",
+    "jobTitle": "Healthcare Operations & Analytics Leader",
     "url": "https://michelgarcia.co/",
     "email": "mailto:michelgarciamiranda@yahoo.com",
     "telephone": "+1-256-469-4429",
@@ -48,20 +55,6 @@
       "addressCountry": "US"
     },
     "knowsLanguage": ["English", "Spanish"],
-    "alumniOf": [
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Western Governors University"
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Andrews University"
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Oakwood University"
-      }
-    ],
     "sameAs": [
       "https://michelgarcia.co/"
     ]
@@ -70,21 +63,21 @@
 
   <style>
     :root {
-      --bg: #f4f1eb;
-      --bg-deep: #ebe4d8;
-      --surface: rgba(255, 252, 247, 0.84);
-      --surface-strong: #fffdf9;
-      --text: #1b1d20;
-      --muted: #5f6670;
-      --line: rgba(27, 29, 32, 0.1);
-      --accent: #113c5a;
-      --accent-2: #8a6a2f;
-      --accent-soft: #d8e2ea;
-      --shadow: 0 24px 70px rgba(24, 33, 42, 0.12);
-      --radius-xl: 30px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --surface-2: #f1f4f8;
+      --text: #111827;
+      --muted: #5b6472;
+      --line: #e5e7eb;
+      --accent: #123b5d;
+      --accent-2: #c59d5f;
+      --success: #0f766e;
       --max: 1180px;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+      --shadow-sm: 0 8px 24px rgba(17, 24, 39, 0.05);
+      --shadow-md: 0 20px 50px rgba(17, 24, 39, 0.08);
     }
 
     * { box-sizing: border-box; }
@@ -92,16 +85,25 @@
 
     body {
       margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
       background:
-        radial-gradient(circle at top left, rgba(17, 60, 90, 0.1), transparent 28%),
-        radial-gradient(circle at 85% 10%, rgba(138, 106, 47, 0.14), transparent 18%),
-        linear-gradient(180deg, var(--bg) 0%, #f8f6f1 38%, var(--bg-deep) 100%);
+        radial-gradient(circle at top left, rgba(18, 59, 93, 0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(197, 157, 95, 0.10), transparent 18%),
+        var(--bg);
+      line-height: 1.65;
       overflow-x: hidden;
     }
 
-    a { color: inherit; text-decoration: none; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .page {
       width: min(100% - 2rem, var(--max));
@@ -110,170 +112,201 @@
     }
 
     .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      margin-bottom: 1.25rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-sm);
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
-      padding: 1rem 0 2rem;
       flex-wrap: wrap;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.92rem;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
 
     .brand-mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       display: grid;
       place-items: center;
       color: #fff;
-      background: linear-gradient(135deg, var(--accent), #1d5e88);
-      box-shadow: var(--shadow);
-      font-weight: bold;
+      background: linear-gradient(135deg, var(--accent), #215f91);
+      font-size: 0.95rem;
+      font-weight: 800;
+      box-shadow: var(--shadow-sm);
     }
 
     .nav-links {
       display: flex;
-      gap: 1.25rem;
+      gap: 1.1rem;
       flex-wrap: wrap;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.94rem;
+      font-weight: 500;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
     .panel {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.55);
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-xl);
     }
 
     .hero {
       display: grid;
-      grid-template-columns: 1.2fr 0.85fr;
-      gap: 1.5rem;
-      min-height: 72vh;
+      grid-template-columns: 1.3fr 0.82fr;
+      gap: 1.25rem;
+      align-items: stretch;
     }
 
-    .hero-copy {
+    .hero-main {
       padding: clamp(1.6rem, 3vw, 3rem);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
       color: var(--muted);
-      font-size: 0.86rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
+      margin-bottom: 1rem;
     }
 
     .eyebrow::before {
       content: "";
-      width: 30px;
+      width: 26px;
       height: 1px;
-      background: rgba(27, 29, 32, 0.3);
+      background: rgba(17, 24, 39, 0.25);
     }
 
     h1 {
-      margin: 1rem 0;
-      font-size: clamp(3rem, 7vw, 5.8rem);
-      line-height: 0.94;
-      letter-spacing: -0.045em;
-      max-width: 10ch;
+      margin: 0;
+      max-width: 11ch;
+      font-size: clamp(2.75rem, 6vw, 5.25rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
     }
 
-    .hero-copy p {
-      margin: 0;
-      max-width: 42rem;
+    .hero-subtitle {
+      margin: 1.1rem 0 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      max-width: 48rem;
+    }
+
+    .hero-copy {
+      margin: 1rem 0 0;
+      max-width: 44rem;
       color: var(--muted);
-      line-height: 1.85;
-      font-size: 1.07rem;
+      font-size: 1rem;
+      line-height: 1.8;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 0.9rem;
+      margin-top: 1.6rem;
     }
 
     .button {
+      min-height: 50px;
+      padding: 0.9rem 1.25rem;
+      border-radius: 999px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 52px;
-      padding: 0.92rem 1.45rem;
-      border-radius: 999px;
-      font-size: 0.96rem;
-      transition: transform 180ms ease, background 180ms ease;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
 
-    .button:hover { transform: translateY(-2px); }
+    .button:hover {
+      transform: translateY(-2px);
+    }
 
     .button-primary {
       background: var(--accent);
       color: #fff;
+      box-shadow: var(--shadow-sm);
     }
 
     .button-secondary {
-      background: rgba(255,255,255,0.45);
+      background: #fff;
+      color: var(--text);
       border: 1px solid var(--line);
     }
 
-    .hero-stats {
+    .proof-strip {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.75rem;
     }
 
-    .stat {
+    .proof-item {
       padding: 1rem;
       border-radius: var(--radius-md);
-      background: rgba(255,255,255,0.46);
-      border: 1px solid rgba(255,255,255,0.45);
+      background: #fff;
+      border: 1px solid var(--line);
     }
 
-    .stat strong {
+    .proof-item strong {
       display: block;
-      font-size: 1.65rem;
-      margin-bottom: 0.35rem;
+      font-size: 1.3rem;
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.03em;
     }
 
-    .stat span {
+    .proof-item span {
+      display: block;
       color: var(--muted);
-      line-height: 1.55;
-      font-size: 0.94rem;
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
     .hero-side {
-      padding: 1.3rem;
+      padding: 1.25rem;
       display: grid;
       gap: 1rem;
     }
 
     .executive-card {
-      border-radius: 24px;
-      min-height: 310px;
       padding: 1.5rem;
+      border-radius: 24px;
+      background: linear-gradient(160deg, #123b5d 0%, #0b2740 100%);
       color: #fff;
-      background:
-        linear-gradient(160deg, rgba(17, 60, 90, 0.96), rgba(12, 41, 61, 0.92));
+      min-height: 280px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -281,21 +314,23 @@
 
     .executive-card small {
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       opacity: 0.78;
+      font-weight: 700;
     }
 
     .executive-card h2 {
       margin: 0.8rem 0;
-      font-size: 2rem;
+      font-size: 1.85rem;
       line-height: 1.15;
       letter-spacing: -0.03em;
     }
 
     .executive-card p {
       margin: 0;
-      color: rgba(255,255,255,0.86);
-      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.86);
+      line-height: 1.75;
+      font-size: 0.98rem;
     }
 
     .mini-grid {
@@ -306,38 +341,42 @@
 
     .mini-card,
     .section-card,
+    .impact-card,
     .experience-item,
     .capability,
     .info-card {
-      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.88);
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.42);
+      border-radius: 22px;
     }
 
     .mini-card,
-    .info-card,
+    .impact-card,
+    .experience-item,
     .capability,
-    .experience-item {
+    .info-card {
       padding: 1.2rem;
     }
 
     .mini-card span,
-    .info-card span {
+    .info-label {
       display: block;
       margin-bottom: 0.45rem;
       color: var(--muted);
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
-    .mini-card strong,
-    .info-card strong {
-      line-height: 1.5;
-      font-size: 1rem;
+    .mini-card strong {
+      font-size: 0.98rem;
+      line-height: 1.55;
     }
 
-    section { margin-top: 1.5rem; }
+    section {
+      margin-top: 1.35rem;
+    }
 
     .section-card {
       padding: clamp(1.35rem, 2vw, 2rem);
@@ -348,23 +387,24 @@
       justify-content: space-between;
       align-items: end;
       gap: 1rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.15rem;
     }
 
     .section-heading h2 {
       margin: 0;
-      font-size: clamp(1.8rem, 3vw, 2.65rem);
-      letter-spacing: -0.03em;
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+      letter-spacing: -0.04em;
     }
 
     .section-heading p {
       margin: 0;
-      max-width: 40rem;
+      max-width: 42rem;
       color: var(--muted);
       line-height: 1.8;
     }
 
     .lead-grid,
+    .impact-grid,
     .capabilities-grid,
     .contact-grid {
       display: grid;
@@ -375,8 +415,38 @@
       grid-template-columns: 1.1fr 0.9fr;
     }
 
+    .impact-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .capabilities-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .impact-card h3,
+    .capability h3,
+    .info-card h3 {
+      margin: 0 0 0.65rem;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+
+    .impact-card p,
+    .info-card p,
+    .info-card li,
+    .capability p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .impact-metric {
+      display: inline-block;
+      margin-bottom: 0.65rem;
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--accent);
     }
 
     .experience-list {
@@ -389,41 +459,22 @@
       justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
     }
 
     .experience-top h3 {
-      margin: 0 0 0.25rem;
-      font-size: 1.25rem;
+      margin: 0 0 0.2rem;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
     }
 
     .meta {
       color: var(--muted);
+      font-size: 0.94rem;
       line-height: 1.6;
     }
 
-    .experience-item ul {
-      margin: 0;
-      padding-left: 1.1rem;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    .capability h3,
-    .info-card h3 {
-      margin-top: 0;
-      margin-bottom: 0.7rem;
-      font-size: 1.15rem;
-    }
-
-    .capability p,
-    .info-card p,
-    .info-card li {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
+    .experience-item ul,
     .info-card ul {
       margin: 0;
       padding-left: 1.1rem;
@@ -431,8 +482,33 @@
       line-height: 1.8;
     }
 
+    .experience-item li + li,
+    .info-card li + li {
+      margin-top: 0.35rem;
+    }
+
     .contact-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.9rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 0.86rem;
+      font-weight: 600;
     }
 
     footer {
@@ -442,20 +518,21 @@
       gap: 1rem;
       flex-wrap: wrap;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1040px) {
       .hero,
       .lead-grid,
       .capabilities-grid,
-      .contact-grid {
+      .contact-grid,
+      .impact-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-stats,
+      .proof-strip,
       .mini-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .section-heading {
@@ -464,14 +541,18 @@
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 680px) {
       .page {
         width: min(100% - 1rem, var(--max));
       }
 
       .nav {
-        flex-direction: column;
         align-items: flex-start;
+      }
+
+      .proof-strip,
+      .mini-grid {
+        grid-template-columns: 1fr;
       }
 
       .button {
@@ -491,8 +572,10 @@
         <span class="brand-mark">MG</span>
         <span>Michel Garcia-Miranda</span>
       </a>
+
       <nav class="nav-links" aria-label="Primary">
-        <a href="#leadership">Leadership Profile</a>
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
         <a href="#experience">Experience</a>
         <a href="#competencies">Competencies</a>
         <a href="#contact">Contact</a>
@@ -501,36 +584,43 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="panel hero-copy">
-          <div>
-            <div class="eyebrow">Healthcare Operations Director Candidate · Strategic Business Analyst</div>
-            <h1 id="hero-title">Driving healthcare operations with executive discipline and measurable outcomes.</h1>
-            <p>
-              Michel Garcia-Miranda is a healthcare operations leader with 8 years of progressive
-              management experience across Stanford Medicine, Tampa General Hospital, AdventHealth,
-              and Datavant. He leads transformation across workforce planning, service delivery,
-              compliance, analytics, and budget stewardship with a clear focus on operational rigor,
-              patient-centered execution, and sustainable performance.
-            </p>
+        <div class="panel hero-main">
+          <div class="eyebrow">Healthcare Operations · Analytics · Performance Improvement</div>
 
-            <div class="hero-actions">
-              <a class="button button-primary" href="mailto:michelgarciamiranda@yahoo.com">Schedule a conversation</a>
-              <a class="button button-secondary" href="#experience">Review executive experience</a>
+          <h1 id="hero-title">Turning complex healthcare operations into measurable results.</h1>
+
+          <p class="hero-subtitle">
+            Healthcare Operations & Analytics Leader
+          </p>
+
+          <p class="hero-copy">
+            I lead healthcare operations and analytics initiatives that improve performance,
+            optimize resources, strengthen compliance, and help leaders make faster, better decisions.
+            My background spans workforce optimization, budget stewardship, process redesign, KPI reporting,
+            and cross-functional execution across hospital and health information environments.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="mailto:michelgarciamiranda@yahoo.com">Contact Michel</a>
+            <a class="button button-secondary" href="#experience">View Experience</a>
+          </div>
+
+          <div class="proof-strip" aria-label="Key proof points">
+            <div class="proof-item">
+              <strong>$2M</strong>
+              <span>Operational budget management and financial stewardship</span>
             </div>
-
-            <div class="hero-stats" aria-label="Key metrics">
-              <div class="stat">
-                <strong>20%</strong>
-                <span>Increase in labor efficiency through strategic departmental assessment and staffing alignment</span>
-              </div>
-              <div class="stat">
-                <strong>15%</strong>
-                <span>Reduction in operational waste through SOP redesign, version control, and process discipline</span>
-              </div>
-              <div class="stat">
-                <strong>$2M</strong>
-                <span>Operational budget managed with forecasting, variance analysis, and finance partnership</span>
-              </div>
+            <div class="proof-item">
+              <strong>20%</strong>
+              <span>Labor optimization through staffing alignment and departmental assessment</span>
+            </div>
+            <div class="proof-item">
+              <strong>15%</strong>
+              <span>Operational waste reduction through SOP redesign and process discipline</span>
+            </div>
+            <div class="proof-item">
+              <strong>100+</strong>
+              <span>Staff supervised across regional and multi-site operations</span>
             </div>
           </div>
         </div>
@@ -539,60 +629,108 @@
           <div class="executive-card">
             <div>
               <small>Executive Positioning</small>
-              <h2>Operational transformation that holds up under scale, scrutiny, and change.</h2>
+              <h2>Built for leadership roles that require both strategic thinking and operational follow-through.</h2>
             </div>
             <p>
-              From frontline workflow redesign to enterprise-facing analytics and compliance support,
-              Michel delivers leadership that is data-literate, people-centered, and accountable to outcomes.
+              This portfolio is designed to reflect both immediate hiring value and long-term advisory credibility:
+              disciplined execution, measurable outcomes, and a clear understanding of how systems, people, and performance connect.
             </p>
           </div>
 
           <div class="mini-grid">
             <div class="mini-card">
               <span>Current Focus</span>
-              <strong>Healthcare operations, strategic analysis, performance improvement, and director-level leadership impact</strong>
+              <strong>Operations analytics, performance improvement, compliance support, and executive-ready reporting</strong>
             </div>
             <div class="mini-card">
-              <span>Leadership Scale</span>
-              <strong>Teams up to 100 staff across multi-site and cross-functional environments</strong>
+              <span>Leadership Scope</span>
+              <strong>Managerial and analytical leadership across hospital operations, patient services, and health information workflows</strong>
             </div>
           </div>
 
           <div class="mini-card">
             <span>Based In</span>
-            <strong>Davenport, Florida · <a href="https://michelgarcia.co/" target="_blank" rel="noreferrer">michelgarcia.co</a></strong>
+            <strong>Davenport, Florida · Open to strategic healthcare operations opportunities</strong>
           </div>
         </aside>
       </section>
 
-      <section id="leadership">
+      <section id="about">
         <div class="panel section-card">
           <div class="section-heading">
-            <h2>Leadership Profile</h2>
+            <h2>About</h2>
             <p>
-              Michel brings a blend of operational command, financial accountability, analytics fluency,
-              and people leadership suited for director-level healthcare roles.
+              I operate at the intersection of healthcare operations, analytics, and execution.
+              My value is not just in managing teams or reporting numbers, but in building systems that improve performance in ways leaders can see, measure, and sustain.
             </p>
           </div>
 
           <div class="lead-grid">
             <div class="info-card">
-              <h3>What He Brings to the Table</h3>
+              <span class="info-label">How I work</span>
+              <h3>Operator mindset. Analyst discipline. Leadership accountability.</h3>
               <p>
-                He does not simply manage departments. He transforms them. His work consistently centers on
-                reducing costs, improving throughput, strengthening compliance, increasing service quality,
-                and building cultures where performance becomes repeatable rather than reactive.
+                I focus on solving operational problems with structure, clarity, and measurable follow-through.
+                That includes redesigning workflows, improving staffing alignment, tightening reporting, supporting compliance,
+                and helping teams move from reactive execution to repeatable performance.
               </p>
             </div>
+
             <div class="info-card">
-              <h3>Director-Level Value</h3>
+              <span class="info-label">Best-fit roles</span>
+              <h3>Where I create the most value</h3>
               <ul>
-                <li>Operational leadership across patient services, mission-driven teams, and health information environments</li>
-                <li>Executive-ready reporting, dashboards, and KPI frameworks that improve decision speed</li>
-                <li>Budget ownership, variance management, and cost-reduction discipline</li>
-                <li>Compliance, audit readiness, and HIPAA-sensitive operational oversight</li>
-                <li>Cross-functional influence across clinical, administrative, and finance stakeholders</li>
+                <li>Healthcare operations leadership</li>
+                <li>Business analysis and performance improvement</li>
+                <li>Workforce planning and service optimization</li>
+                <li>Budget, KPI, and dashboard-driven management</li>
+                <li>Cross-functional operational transformation</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="impact">
+        <div class="panel section-card">
+          <div class="section-heading">
+            <h2>Selected Impact</h2>
+            <p>
+              Before reading titles, recruiters and decision-makers want proof. These are the kinds of outcomes I help create.
+            </p>
+          </div>
+
+          <div class="impact-grid">
+            <div class="impact-card">
+              <span class="impact-metric">$2M</span>
+              <h3>Budget stewardship</h3>
+              <p>
+                Managed operational budgets with forecasting, variance analysis, and cost-awareness across complex healthcare environments.
+              </p>
+            </div>
+
+            <div class="impact-card">
+              <span class="impact-metric">20%</span>
+              <h3>Labor optimization</h3>
+              <p>
+                Improved labor allocation through department assessment, staffing alignment, and operational planning.
+              </p>
+            </div>
+
+            <div class="impact-card">
+              <span class="impact-metric">15%</span>
+              <h3>Waste reduction</h3>
+              <p>
+                Reduced operational waste through SOP redesign, tighter version control, and stronger process discipline.
+              </p>
+            </div>
+
+            <div class="impact-card">
+              <span class="impact-metric">100+</span>
+              <h3>Leadership scale</h3>
+              <p>
+                Supervised and supported regional staff in high-volume environments while maintaining service quality and compliance expectations.
+              </p>
             </div>
           </div>
         </div>
@@ -601,10 +739,9 @@
       <section id="experience">
         <div class="panel section-card">
           <div class="section-heading">
-            <h2>Executive Experience</h2>
+            <h2>Experience</h2>
             <p>
-              Career progression across nationally recognized healthcare systems with a consistent focus
-              on workforce optimization, operational performance, analytics, and service excellence.
+              Career progression across healthcare systems and operational environments with a consistent focus on performance, leadership, analytics, and service delivery.
             </p>
           </div>
 
@@ -615,14 +752,13 @@
                   <h3>Business Analyst</h3>
                   <div class="meta">Stanford Medicine · Palo Alto, CA</div>
                 </div>
-                <div class="meta">Jan 2026 - Present</div>
+                <div class="meta">Jan 2026 – Present</div>
               </div>
               <ul>
-                <li>Lead cross-functional analytics initiatives that improve compliance and operational performance across clinical and administrative divisions.</li>
-                <li>Produce executive-ready reports and dashboards that compress decision cycles and sharpen strategic planning.</li>
-                <li>Translate complex data into actionable recommendations around reimbursement gaps, budget variance, and operational opportunity.</li>
-                <li>Manage regulatory and accreditation data requests with timely, audit-ready accuracy.</li>
-                <li>Embed analytics into workflows to build shared accountability and stronger data fluency.</li>
+                <li>Lead analytics initiatives that support compliance, operational performance, and decision-making across clinical and administrative areas.</li>
+                <li>Develop executive-ready dashboards and reporting that improve visibility into trends, gaps, and strategic opportunities.</li>
+                <li>Translate complex operational and reimbursement data into actionable recommendations.</li>
+                <li>Support audit-ready data requests with accuracy, structure, and cross-functional coordination.</li>
               </ul>
             </article>
 
@@ -632,14 +768,13 @@
                   <h3>Health Information Operations Manager</h3>
                   <div class="meta">Datavant Group · Remote, FL</div>
                 </div>
-                <div class="meta">Jul 2025 - Oct 2025</div>
+                <div class="meta">Jul 2025 – Oct 2025</div>
               </div>
               <ul>
-                <li>Supervised and mentored up to 100 regional staff across multiple sites in a high-volume health information environment.</li>
-                <li>Streamlined medical records fulfillment workflows by identifying process gaps and driving targeted operational improvements.</li>
-                <li>Maintained zero HIPAA violations through workflow audits, access reviews, and compliance discipline.</li>
-                <li>Partnered with clients and account management in monthly business reviews to align expectations and resolve concerns proactively.</li>
-                <li>Tracked productivity and turnaround metrics to establish performance baselines and guide decision-making.</li>
+                <li>Supervised up to 100 regional staff across multiple sites in a high-volume health information environment.</li>
+                <li>Improved workflow performance by identifying process gaps and implementing targeted operational improvements.</li>
+                <li>Maintained zero HIPAA violations through audits, access reviews, and disciplined compliance oversight.</li>
+                <li>Used productivity and turnaround data to guide service expectations and performance management.</li>
               </ul>
             </article>
 
@@ -649,14 +784,13 @@
                   <h3>Manager, Patient Care Services Division</h3>
                   <div class="meta">Stanford Medicine · Palo Alto, CA</div>
                 </div>
-                <div class="meta">Jul 2024 - Jul 2025</div>
+                <div class="meta">Jul 2024 – Jul 2025</div>
               </div>
               <ul>
-                <li>Directed staffing, scheduling, and workforce planning for a 27-person team aligned to departmental KPIs and patient volume.</li>
-                <li>Owned budget planning and variance tracking while identifying cost-saving opportunities and maintaining execution discipline.</li>
-                <li>Designed and deployed a real-time digital dashboard that improved visibility into clinical and operational metrics.</li>
-                <li>Overhauled SOPs and standardized care team workflows to reduce inefficiencies and improve consistency.</li>
-                <li>Established KPI frameworks and data processes that improved operational reporting and leadership visibility.</li>
+                <li>Directed staffing, scheduling, and workforce planning for a 27-person team aligned to service demand and departmental goals.</li>
+                <li>Owned budget planning and variance monitoring while identifying cost-saving opportunities.</li>
+                <li>Designed and implemented a real-time dashboard that improved operational and clinical visibility.</li>
+                <li>Standardized workflows and KPI processes to improve consistency, reporting, and leadership insight.</li>
               </ul>
             </article>
 
@@ -666,14 +800,13 @@
                   <h3>Manager, Patient Experience Division</h3>
                   <div class="meta">Tampa General Hospital · Tampa, FL</div>
                 </div>
-                <div class="meta">Jul 2021 - Jan 2024</div>
+                <div class="meta">Jul 2021 – Jan 2024</div>
               </div>
               <ul>
-                <li>Led daily operations for a high-volume patient experience department while consistently meeting service expectations.</li>
-                <li>Drove a 20% increase in labor allocation through a comprehensive departmental needs assessment.</li>
-                <li>Managed a $2M budget with accountability for forecasting, variance analysis, reporting, and cost-saving identification.</li>
-                <li>Reduced operational waste by 15% through SOP development with disciplined version control.</li>
-                <li>Improved wait times and satisfaction by streamlining intake processes and implementing a digital patient feedback system.</li>
+                <li>Led daily operations in a high-volume patient experience environment while maintaining service standards.</li>
+                <li>Increased labor allocation efficiency by 20% through a departmental needs assessment and resource alignment.</li>
+                <li>Managed a $2M budget with forecasting, reporting, variance analysis, and cost-saving identification.</li>
+                <li>Reduced operational waste by 15% through SOP development and version-control discipline.</li>
               </ul>
             </article>
 
@@ -683,13 +816,13 @@
                   <h3>Manager, Mission Division</h3>
                   <div class="meta">AdventHealth · Tampa, FL</div>
                 </div>
-                <div class="meta">Aug 2018 - Apr 2021</div>
+                <div class="meta">Aug 2018 – Apr 2021</div>
               </div>
               <ul>
-                <li>Built and led a 12-person team from the ground up, establishing the structure and standards that became the departmental model.</li>
-                <li>Redesigned staffing and scheduling models to improve reliability, responsiveness, and shift coverage.</li>
-                <li>Developed coaching plans that improved staff performance and accelerated professional growth.</li>
-                <li>Engineered cross-department workflows that reduced silos and improved treatment efficiency and patient outcomes.</li>
+                <li>Built and led a 12-person team from the ground up, establishing structure, standards, and department-level consistency.</li>
+                <li>Redesigned staffing and scheduling approaches to improve reliability and service responsiveness.</li>
+                <li>Developed coaching plans that improved staff performance and supported professional growth.</li>
+                <li>Improved cross-department coordination by creating stronger workflows and reducing operational silos.</li>
               </ul>
             </article>
           </div>
@@ -701,36 +834,61 @@
           <div class="section-heading">
             <h2>Core Competencies</h2>
             <p>
-              Built for healthcare leadership environments that require operational control, financial discipline,
-              compliance confidence, and credible cross-functional influence.
+              A balanced mix of operational leadership, analytics capability, financial discipline, and communication strength.
             </p>
           </div>
 
           <div class="capabilities-grid">
             <div class="capability">
-              <h3>Operations & Transformation</h3>
-              <p>Workforce planning, capacity alignment, SOP development, process optimization, change management, and risk mitigation.</p>
+              <h3>Operations Strategy</h3>
+              <p>
+                Workforce planning, service optimization, process redesign, SOP development, change management, and operational improvement.
+              </p>
             </div>
+
             <div class="capability">
-              <h3>Finance & Stewardship</h3>
-              <p>Budget forecasting, variance analysis, P&amp;L awareness, cost control, and finance partnership across operational initiatives.</p>
+              <h3>Analytics & Reporting</h3>
+              <p>
+                KPI design, dashboards, trend analysis, executive reporting, data translation, and operational insight generation.
+              </p>
             </div>
+
             <div class="capability">
-              <h3>Analytics & Performance</h3>
-              <p>KPI design, executive dashboards, forecasting, reporting, Power BI, Tableau, and data-driven operational decision support.</p>
+              <h3>Financial Management</h3>
+              <p>
+                Budget stewardship, forecasting, variance analysis, cost control, and finance-aligned operational planning.
+              </p>
             </div>
-            <div class="capability">
-              <h3>Leadership & Culture</h3>
-              <p>Team leadership up to 100 staff, coaching, distributed workforce management, conflict mitigation, and staff development.</p>
-            </div>
+
             <div class="capability">
               <h3>Compliance & Governance</h3>
-              <p>HIPAA compliance, audit support, SLA performance, privacy controls, and operational accountability in regulated settings.</p>
+              <p>
+                HIPAA-sensitive operations, audit support, workflow controls, accountability structures, and risk-aware execution.
+              </p>
             </div>
+
+            <div class="capability">
+              <h3>Leadership & Team Development</h3>
+              <p>
+                Team supervision, coaching, distributed workforce management, stakeholder alignment, and culture-building through clarity and standards.
+              </p>
+            </div>
+
             <div class="capability">
               <h3>Executive Communication</h3>
-              <p>Leadership reporting, stakeholder alignment, cross-functional facilitation, and translating operational complexity into clear action.</p>
+              <p>
+                Clear written and verbal communication for leaders who need concise recommendations, evidence, and decision-ready framing.
+              </p>
             </div>
+          </div>
+
+          <div class="tag-row" aria-label="Tools and supporting strengths">
+            <span class="tag">Power BI</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">KPI Dashboards</span>
+            <span class="tag">Process Improvement</span>
+            <span class="tag">Budget Forecasting</span>
+            <span class="tag">Cross-Functional Leadership</span>
           </div>
         </div>
       </section>
@@ -740,14 +898,14 @@
           <div class="section-heading">
             <h2>Contact</h2>
             <p>
-              Open to director-level healthcare operations, business analysis, performance improvement,
-              and strategic leadership opportunities.
+              Open to healthcare operations, analytics, performance improvement, and leadership opportunities.
             </p>
           </div>
 
           <div class="contact-grid">
             <div class="info-card">
-              <h3>Connect</h3>
+              <span class="info-label">Contact</span>
+              <h3>Let’s connect</h3>
               <p>Email: <a href="mailto:michelgarciamiranda@yahoo.com">michelgarciamiranda@yahoo.com</a></p>
               <p>Phone: <a href="tel:12564694429">256-469-4429</a></p>
               <p>Location: Davenport, FL</p>
@@ -755,11 +913,12 @@
             </div>
 
             <div class="info-card">
-              <h3>Education & Credentials</h3>
+              <span class="info-label">Education & Credentials</span>
+              <h3>Academic foundation</h3>
               <ul>
-                <li>MBA, Healthcare Administration - Western Governors University</li>
-                <li>Master's Degree - Andrews University</li>
-                <li>Bachelor's Degree - Oakwood University</li>
+                <li>MBA, Healthcare Administration</li>
+                <li>Master’s Degree</li>
+                <li>Bachelor’s Degree</li>
                 <li>Lean Sigma Yellow Belt</li>
                 <li>Foundations of Project Management</li>
                 <li>Databricks AI and Generative AI Fundamentals</li>
@@ -773,7 +932,7 @@
 
     <footer>
       <span>&copy; 2026 Michel Garcia-Miranda</span>
-      <span>Healthcare Operations Leader · Strategic Business Analyst</span>
+      <span>Healthcare Operations & Analytics Leader</span>
     </footer>
   </div>
 </body>
